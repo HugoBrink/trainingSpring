@@ -1,12 +1,15 @@
 package com.accenture.training.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.mapping.List;
 
 @Entity
 @Table(name = "\"TRAINING_CLIENT_TBICLIENT\"")
@@ -25,6 +28,9 @@ public class ClientsEntity {
 	
 	@Column(name = "\"FAMILYNAME\"")
 	private String familyname;
+	
+	/*@OneToMany(mappedBy = "clients", cascade = { CascadeType.REMOVE, CascadeType.MERGE, CascadeType.REFRESH} )
+	private List<SalesOrderEntity> items;*/
 	
 	public String getId() {return id;}
 	

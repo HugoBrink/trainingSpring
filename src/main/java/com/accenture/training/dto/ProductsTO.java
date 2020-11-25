@@ -3,6 +3,8 @@ package com.accenture.training.dto;
 public class ProductsTO {
 	
 	private String id;
+	private String validFrom;
+	private String validTo;
 	private String name;
 	private String manufacturer;
 	public String getId() {
